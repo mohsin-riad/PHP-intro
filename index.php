@@ -1,3 +1,18 @@
+<?php 
+    session_start();
+    if(!$_SESSION['usrname'])
+    {
+        session_destroy();
+        header('Location:  login.php');
+    }
+    if($_SESSION['usrname'] && $_SESSION['poss'] != 'admin')
+    {
+        session_destroy();
+        ///echo "unidentified user!!";
+        header('Location: login.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +33,6 @@
             <li class="nav-item"> <a class="nav-link" href="create_dept.php">create department</a> </li>
         </ul>
     </nav>
-
     <div class="container" style="margin-top:80px">
         <div>
             <h2>Dashboard</h2>

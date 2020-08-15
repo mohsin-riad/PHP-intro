@@ -13,3 +13,10 @@ CREATE TABLE student(
     department_id int,
     FOREIGN KEY (department_id) REFERENCES departments(id)
 );
+
+CREATE TABLE users(
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email varchar(255),
+    password varchar(255),
+    poss varchar(255)
+);
