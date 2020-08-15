@@ -11,6 +11,5 @@
         die(" connection failed: " . mysqli_connection_error());
     }
     //echo "connection successful";
-
 ?>
 
