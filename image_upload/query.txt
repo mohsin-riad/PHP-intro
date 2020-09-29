@@ -1,0 +1,5 @@
+CREATE TABLE data(
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255),
+    upload_date date
+);
